@@ -1,0 +1,6 @@
+{
+    "serverName": "pascere",
+    "serverPort": 3000,
+    "websiteName": "pascere",
+    "mongoDB": "mongodb+srv://JakeTheDane:Acq59hhc.@maincluster-r0dde.mongodb.net/pascere"
+}

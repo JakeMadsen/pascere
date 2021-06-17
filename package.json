@@ -1,0 +1,39 @@
+{
+  "name": "pascere",
+  "version": "0.0.1",
+  "description": "Employee feedback and roadmap portal",
+  "main": "./bin/server.js",
+  "scripts": {
+    "start": "node ./bin/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeMadsen/pascere.git"
+  },
+  "author": "JakeTheDane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JakeMadsen/pascere/issues"
+  },
+  "homepage": "https://github.com/JakeMadsen/pascere#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.4.1",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "hat": "0.0.3",
+    "http-errors": "^1.8.0",
+    "ip": "^1.1.5",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.12.14",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "portfinder": "^1.0.28",
+    "readline-sync": "^1.4.10"
+  }
+}

@@ -1,0 +1,33 @@
+* {
+    font-family: atkinson;
+}
+
+@font-face {
+    font-family: "atkinson";
+    src: url("/static/style/fonts/Atkinson-Hyperlegible-Bold-102a.woff2");
+}
+
+header {
+    height: auto;    
+}
+
+.green-background {
+    background-color: #beffe1;
+    color: #4600b4;
+}
+.logo-size {
+    width: 120px;
+
+}
+
+.light-red {
+    background-color: #FFA6A6;
+}
+
+.dark-purple {
+    background-color: #FFF5B8;
+}
+
+.light-green {
+    background-color: #3EF4A6;
+}
