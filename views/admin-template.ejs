@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<!-- Includees all scripts -->
-<%- include('partials/standard/scripts'); -%>
-
-<head>
-    <!-- Includees head and styles -->
-    <%- include('partials/standard/head'); -%>
-</head>
+<!-- Include Scripts -->
+<%- include('partials/admin/head'); -%>
 
 <body>
-    <!-- Includes Header -->
-    <%- include('partials/standard/header'); -%>
 
-    <main id="container" class="">
-        <%- include(`pages/${page_file}.ejs`) %>
-    </main>
+    <div class="wrapper">
+        <!-- Include Sidebar Navigation -->
+        <%- include('partials/admin/sidebar_nav'); -%>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <!-- Include Header Navigation -->
+            <%- include ('partials/admin/header_nav') -%>
+
+            <%- include(`pages/${page_file}.ejs`) %>
+        </div>
+    </div>
     
-    <%- include('partials/standard/footer'); -%>
+    <!-- Include Scripts -->
+    <%- include ('partials/admin/scripts') -%>
 </body>
 
-   
 </html>
-

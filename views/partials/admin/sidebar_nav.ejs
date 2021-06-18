@@ -1,0 +1,75 @@
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <a href="/admin">
+            <img class="hideLogo img-fluid" src="https://omnidocs.com/wp-content/themes/omnidocs/assets/images/logo.svg"alt="">
+            <img class="showFavicon img-fluid" src="/static/style/img/favicon.png"alt="">
+        </a>
+
+    </div>
+
+    <ul class="list-unstyled components">
+        <!-- Go to index -->
+        <li class="">
+            <a href="/admin">
+                <div class="row">
+                    <div class="col-md-2">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="col-md-10">
+                        Home
+                    </div>
+                </div>
+                
+                
+            </a>
+        </li>
+
+        <!-- Go to user management -->
+        <li class="">
+            <a href="/admin/users">
+                <i class="fas fa-users"></i>
+                Users
+            </a>
+        </li>  
+
+        <!-- Go to board management -->
+        <li class="">
+            <a href="/admin/boards">
+                <i class="fab fa-wpforms"></i>
+                Boards
+            </a>
+        </li>
+
+        <!-- Other minor things -->
+        <li class="">
+            <a href="#otherSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-clone"></i>
+                Board Posts
+            </a>
+            <ul class="collapse list-unstyled" id="otherSubmenu">
+                <li class="">
+                    <a href="/admin/restrictedUrls">
+                        <i class="fas fa-list"></i>
+                        URL Restrictions
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- return to website -->
+        <li >
+            <a href="/">
+                <i class="fas fa-home"></i>
+                Return
+            </a>
+        </li>
+
+        <!-- log out -->
+        <li >
+            <a href="/logout">
+                <i class="fas fa-sign-out-alt"></i>
+                Log out
+            </a>
+        </li>
+    </ul>
+</nav>

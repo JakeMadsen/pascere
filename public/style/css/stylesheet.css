@@ -7,6 +7,10 @@
     src: url("/static/style/fonts/Atkinson-Hyperlegible-Bold-102a.woff2");
 }
 
+body {
+    background-color: #4600B4;
+}
+
 header {
     height: auto;    
 }
@@ -24,10 +28,35 @@ header {
     background-color: #FFA6A6;
 }
 
-.dark-purple {
+.yellow {
     background-color: #FFF5B8;
+}
+
+.dark-purple {
+    background-color: #4600B4;
 }
 
 .light-green {
     background-color: #3EF4A6;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+.text-purple {
+    color: #4600B4;
+}
+.text-black {
+    color: #323232;
+}
+
+.push-top-50 {
+    padding-top: 50px;
+}
+.divider {
+    margin: 20px 0px 20px 0px;
 }

@@ -12,4 +12,16 @@ module.exports = function (server) {
             });
         }
     );
+
+    server.get('/admin/boards', 
+        async function(req, res) {
+            res.render('admin-template.ejs', {
+                page_title: "pascere - Boards",
+                page_file: "admin-boards",
+                page_data: {
+
+                }
+            });
+        }
+    );
 }

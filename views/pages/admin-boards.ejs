@@ -1,0 +1,685 @@
+<link rel="stylesheet" href="/static/style/css/mdb/new-prism.css" />
+<!-- MDB -->
+<link rel="stylesheet" href="/static/style/css/mdb/mdb.min.css" />
+<!-- Plugin css file -->
+<link rel="stylesheet" href="/static/style/css/mdb/table-editor.min.css" />
+<!-- Custom styles -->
+
+<!-- Button trigger modal -->
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<table class="table align-middle">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Lorem</th>
+      <th scope="col">Ipsum</th>
+      <th scope="col">Dolor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Sit</td>
+      <td>Amet</td>
+      <td>
+        <button type="button" class="btn btn-danger btn-sm px-3">
+          <i class="fas fa-times"></i>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Adipisicing</td>
+      <td>Elit</td>
+      <td>
+        <button type="button" class="btn btn-danger btn-sm px-3">
+          <i class="fas fa-times"></i>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Hic</td>
+      <td>Fugiat</td>
+      <td>
+        <button type="button" class="btn btn-danger btn-sm px-3">
+          <i class="fas fa-times"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<section class="border p-4">
+  <div class="d-flex justify-content-end mb-4">
+    <div class="form-outline">
+      <input data-search="" data-target="#table_modal" type="text" id="search_modal" class="form-control">
+      <label class="form-label" for="search_modal" style="margin-left: 0px;">Search</label>
+      <div class="form-notch">
+        <div class="form-notch-leading" style="width: 9px;"></div>
+        <div class="form-notch-middle" style="width: 47.2px;"></div>
+        <div class="form-notch-trailing"></div>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-sm ml-3 ripple-surface" data-add-entry="" data-target="#table_modal">
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
+  <hr>
+  <div id="table_modal" class="table-editor">
+    <div class="table-editor__inner table-responsive ps" style="overflow: auto; position: relative;">
+      <table class="table ">
+        <thead>
+          <tr>
+            <th style="cursor: pointer;" scope="col"><i data-sort="company"
+                class="table-editor__sort-icon fas fa-arrow-up"></i> Company</th>
+            <th style="" scope="col"> Office</th>
+            <th style="cursor: pointer;" scope="col"><i data-sort="employees"
+                class="table-editor__sort-icon fas fa-arrow-up"></i> Employees</th>
+            <th style="cursor: pointer;" scope="col"><i data-sort="international"
+                class="table-editor__sort-icon fas fa-arrow-up"></i> International</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr scope="row" data-index="0">
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="company">Smith &amp; Johnson</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="office">London</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="employees">30</td>
+            <td style="min-width: 100px; max-width: 100px" class="" data-field="international">true</td>
+            <td><button class="mr-2 btn btn-lg text-dark edit-button"><i class="far fa-edit"></i></button><button
+                class="btn btn-lg text-dark delete-button "><i class="far fa-trash-alt"></i></button></td>
+          </tr>
+          <tr scope="row" data-index="1">
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="company">P.J. Company</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="office">London</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="employees">80</td>
+            <td style="min-width: 100px; max-width: 100px" class="" data-field="international">false</td>
+            <td><button class="mr-2 btn btn-lg text-dark edit-button"><i class="far fa-edit"></i></button><button
+                class="btn btn-lg text-dark delete-button "><i class="far fa-trash-alt"></i></button></td>
+          </tr>
+          <tr scope="row" data-index="2">
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="company">Food &amp; Wine</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="office">London</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="employees">12</td>
+            <td style="min-width: 100px; max-width: 100px" class="" data-field="international">false</td>
+            <td><button class="mr-2 btn btn-lg text-dark edit-button"><i class="far fa-edit"></i></button><button
+                class="btn btn-lg text-dark delete-button "><i class="far fa-trash-alt"></i></button></td>
+          </tr>
+          <tr scope="row" data-index="3">
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="company">IT Service</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="office">London</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="employees">17</td>
+            <td style="min-width: 100px; max-width: 100px" class="" data-field="international">false</td>
+            <td><button class="mr-2 btn btn-lg text-dark edit-button"><i class="far fa-edit"></i></button><button
+                class="btn btn-lg text-dark delete-button "><i class="far fa-trash-alt"></i></button></td>
+          </tr>
+          <tr scope="row" data-index="4">
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="company">A. Jonson Gallery</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="office">London</td>
+            <td style="min-width: 250px; max-width: 250px" class="" data-field="employees">4</td>
+            <td style="min-width: 100px; max-width: 100px" class="" data-field="international">false</td>
+            <td><button class="mr-2 btn btn-lg text-dark edit-button"><i class="far fa-edit"></i></button><button
+                class="btn btn-lg text-dark delete-button "><i class="far fa-trash-alt"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+      </div>
+      <div class="ps__rail-y" style="top: 0px; right: 0px;">
+        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+      </div>
+    </div>
+
+
+    <div class="table-editor__pagination">
+      <div class="table-editor__select-wrapper">
+        <p class="table-editor__select-text">Rows per page:</p>
+        <div id="select-wrapper-742959" class="select-wrapper">
+          <div class="form-outline"><input class="form-control select-input active" type="text" role="listbox"
+              aria-multiselectable="false" aria-disabled="false" aria-haspopup="true" aria-expanded="false"
+              readonly=""><span class="select-arrow"></span>
+            <div class="form-notch">
+              <div class="form-notch-leading" style="width: 9px;"></div>
+              <div class="form-notch-middle" style="width: 0px;"></div>
+              <div class="form-notch-trailing"></div>
+            </div>
+            <div class="form-notch">
+              <div class="form-notch-leading" style="width: 9px;"></div>
+              <div class="form-notch-middle" style="width: 0px;"></div>
+              <div class="form-notch-trailing"></div>
+            </div>
+          </div><select name="entries" class="table-editor__select select select-initialized">
+            <option value="5" selected="">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-editor__pagination-nav">1 - 5 of 6</div>
+      <div class="table-editor__pagination-buttons">
+
+        <button data-ripple-color="dark"
+          class="btn btn-link table-editor__pagination-button table-editor__pagination-left" disabled="true"><i
+            class="fa fa-chevron-left"></i></button>
+        <button data-ripple-color="dark"
+          class="btn btn-link table-editor__pagination-button table-editor__pagination-right"><i
+            class="fa fa-chevron-right"></i></button>
+
+      </div>
+    </div>
+
+    <div class="modal fade" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h4>New item</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="my-4 table-editor_input-wrapper" data-field="company">
+                <div class="form-outline "><input type="text" class="table-editor__input form-control" value="">
+                  <label class="form-label" style="margin-left: 0px;">Company</label>
+                  <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 56.8px;"></div>
+                    <div class="form-notch-trailing"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="my-4 table-editor_input-wrapper" data-field="office">
+                <div id="select-wrapper-392708" class="select-wrapper">
+                  <div class="form-outline"><input class="form-control select-input active" type="text" role="listbox"
+                      aria-multiselectable="false" aria-disabled="false" aria-haspopup="true" aria-expanded="false"
+                      readonly=""><label class="form-label select-label active"
+                      style="margin-left: 0px;">Office</label><span class="select-arrow"></span>
+                    <div class="form-notch">
+                      <div class="form-notch-leading" style="width: 9px;"></div>
+                      <div class="form-notch-middle" style="width: 37.6px;"></div>
+                      <div class="form-notch-trailing"></div>
+                    </div>
+                  </div><select class="select table-editor__input-select select-initialized">
+                    <option value="London">London</option>
+                    <option value="Warsaw" selected="">Warsaw</option>
+                    <option value="New York">New York</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="my-4 table-editor_input-wrapper" data-field="employees">
+                <div class="form-outline "><input type="number" class="table-editor__input form-control active"
+                    value="1">
+                  <label class="form-label" style="margin-left: 0px;">Employees</label>
+                  <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 64px;"></div>
+                    <div class="form-notch-trailing"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="my-4 table-editor_input-wrapper" data-field="international">
+                <div class="form-check ml-1 mt-1 pl-0">
+                  <input class="table-editor__input form-check-input ml-1" type="checkbox">
+                  <label class="pl-3 form-check-label">International</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn shadow-0 btn-md btn-outline-primary discard-button ripple-surface"
+              data-dismiss="modal">Cancel</button>
+            <button class="mr-2 btn shadow-0 btn-md btn-primary save-button">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  $('tbody').sortable();
+</script>
+
+<script>
+  const advancedColumns = [
+    {
+      width: 250,
+      label: 'Company',
+      field: 'company',
+    },
+    {
+      width: 250,
+      sort: false,
+      defaultValue: 'Warsaw',
+      options: ['London', 'Warsaw', 'New York'],
+      inputType: 'select',
+      label: 'Office',
+      field: 'office',
+    },
+    {
+      width: 250,
+      inputType: 'number',
+      defaultValue: 1,
+      label: 'Employees',
+      field: 'employees',
+    },
+    {
+      width: 100,
+      defaultValue: false,
+      inputType: 'checkbox',
+      label: 'International',
+      field: 'international',
+    },
+  ];
+
+  const advancedRows = [
+    {
+      company: 'Smith &amp; Johnson',
+      office: 'London',
+      employees: 30,
+      international: true,
+    },
+    {
+      company: 'P.J. Company',
+      office: 'London',
+      employees: 80,
+      international: false,
+    },
+    {
+      company: 'Food &amp; Wine',
+      office: 'London',
+      employees: 12,
+      international: false,
+    },
+    {
+      company: 'IT Service',
+      office: 'London',
+      employees: 17,
+      international: false,
+    },
+    {
+      company: 'A. Jonson Gallery',
+      office: 'London',
+      employees: 4,
+      international: false,
+    },
+    {
+      company: 'F.A. Architects',
+      office: 'London',
+      employees: 4,
+      international: false,
+    },
+  ];
+
+  const tableModal = new TableEditor(
+    document.getElementById('table_modal'),
+    {
+      columns: advancedColumns,
+      rows: advancedRows,
+    },
+    { mode: 'modal', entries: 5, entriesOptions: [5, 10, 15] }
+  );
+
+</script>
+
+<script type="text/javascript" src="/static/style/js/mdb/mdbsnippet.min.js"></script>
+<!-- MDB -->
+<script type="text/javascript" src="/static/style/js/mdb/mdb.min.js"></script>
+<!-- Plugin js file -->
+<script type="text/javascript" src="/static/style/js/mdb/table-editor.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript">
+  const advancedColumns = [
+    {
+      width: 250,
+      label: 'Company',
+      field: 'company',
+    },
+    {
+      width: 250,
+      sort: false,
+      defaultValue: 'Warsaw',
+      options: ['London', 'Warsaw', 'New York'],
+      inputType: 'select',
+      label: 'Office',
+      field: 'office',
+    },
+    {
+      width: 250,
+      inputType: 'number',
+      defaultValue: 1,
+      label: 'Employees',
+      field: 'employees',
+    },
+    {
+      width: 100,
+      defaultValue: false,
+      inputType: 'checkbox',
+      label: 'International',
+      field: 'international',
+    },
+  ];
+
+  const advancedRows = [
+    {
+      company: 'Smith & Johnson',
+      office: 'London',
+      employees: 30,
+      international: true,
+    },
+    {
+      company: 'P.J. Company',
+      office: 'London',
+      employees: 80,
+      international: false,
+    },
+    {
+      company: 'Food & Wine',
+      office: 'London',
+      employees: 12,
+      international: false,
+    },
+    {
+      company: 'IT Service',
+      office: 'London',
+      employees: 17,
+      international: false,
+    },
+    {
+      company: 'A. Jonson Gallery',
+      office: 'London',
+      employees: 4,
+      international: false,
+    },
+    {
+      company: 'F.A. Architects',
+      office: 'London',
+      employees: 4,
+      international: false,
+    },
+  ];
+
+  const columns = [
+    {
+      width: 250,
+      label: 'Company',
+      field: 'company',
+    },
+    {
+      width: 250,
+      label: 'Address',
+      field: 'address',
+    },
+    {
+      width: 250,
+      label: 'City',
+      field: 'city',
+    },
+  ];
+
+  const rows = [
+    ['Smith & Johnson', 'Park Lane 2', 'London'],
+    ['P.J. Company', 'Oak Street 7', 'Aberdeen'],
+    ['Food & Wine', 'Netherhall Gardens 3', 'Hampstead'],
+    ['IT Service', 'Warwick Road 14', 'London'],
+    ['A. Jonson Gallery', 'Oaklands Avenue 2', 'London'],
+    ['F.A. Architects', 'Frognal Way 7', 'Hampstead'],
+  ];
+
+  (function () {
+    const tableDisableEdit = new TableEditor(
+      document.getElementById('table_inputs'),
+      { columns: advancedColumns, rows: advancedRows },
+      { entries: 5, entriesOptions: [5, 10, 15] }
+    );
+  })();
+
+  (function () {
+    const tableDisableEdit = new TableEditor(
+      document.getElementById('table_disable_edit'),
+      {
+        columns: advancedColumns.map((column) => {
+          return {
+            ...column,
+            editable: false,
+          };
+        }),
+        rows: advancedRows,
+      },
+      { entries: 5, entriesOptions: [5, 10, 15] }
+    );
+  })();
+
+  (function () {
+    const tableModal = new TableEditor(
+      document.getElementById('table_modal'),
+      {
+        columns: advancedColumns,
+        rows: advancedRows,
+      },
+      { mode: 'modal', entries: 5, entriesOptions: [5, 10, 15] }
+    );
+  })();
+
+  // Confirm delete
+
+  (function () {
+    const tableConfirmDelete = new TableEditor(
+      document.getElementById('table_confirm_delete'),
+      {
+        columns: advancedColumns,
+        rows: advancedRows,
+      },
+      { entries: 5, entriesOptions: [5, 10, 15], confirm: true }
+    );
+  })();
+
+  // advanced search
+
+  (function () {
+    const input = document.getElementById('search_advanced');
+    const select = document.getElementById('search_advanced_select');
+    const searchBtn = document.getElementById('search_advanced_btn');
+    const table = document.getElementById('table_advanced_search');
+
+    const search = () => {
+      tableAdvancedSearch.search(input.value, select.value);
+    };
+
+    const tableAdvancedSearch = new TableEditor(
+      table,
+      {
+        columns: advancedColumns,
+        rows: advancedRows,
+      },
+      { entries: 5, entriesOptions: [5, 10, 15] }
+    );
+
+    searchBtn.addEventListener('click', search);
+
+    const toggleSelectState = (disabled) => {
+      const selectInstance = mdb.Select.getInstance(select);
+      selectInstance.dispose();
+
+      if (disabled) {
+        select.setAttribute('data-disabled', true);
+      } else {
+        select.removeAttribute('data-disabled');
+      }
+
+      new mdb.Select(select);
+    };
+
+    table.addEventListener('edit.mdb.tableEditor', () => {
+      input.setAttribute('disabled', true);
+      searchBtn.setAttribute('disabled', true);
+
+      toggleSelectState(true);
+    });
+
+    table.addEventListener('exit.mdb.tableEditor', () => {
+      input.removeAttribute('disabled');
+      searchBtn.removeAttribute('disabled');
+
+      toggleSelectState(false);
+    });
+  })();
+
+  // async data
+
+  (function () {
+    const table = document.getElementById('table_async_data');
+    const loadBtn = document.getElementById('async_data_btn');
+
+    const columns = [
+      { label: 'Company', field: 'company' },
+      { label: 'Email', field: 'email' },
+      { label: 'Name', field: 'name' },
+      { label: 'Phone', field: 'phone' },
+    ];
+
+    const asyncTable = new TableEditor(
+      table,
+      {
+        columns,
+      },
+      {
+        loading: true,
+      }
+    );
+
+    const loadData = () => {
+      asyncTable.update(null, { loading: true });
+
+      fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response) => response.json())
+        .then((data) => {
+          setTimeout(() => {
+            asyncTable.update(
+              {
+                rows: data.map((user) => ({
+                  ...user,
+                  address: `${user.address.city}, ${user.address.street}`,
+                  company: user.company.name,
+                })),
+              },
+              { loading: false }
+            );
+          }, 2000);
+        });
+    };
+
+    loadBtn.addEventListener('click', loadData);
+
+    table.addEventListener('update.mdb.tableEditor', (e) => {
+      // here you can create a POST request to update your database
+      console.log(e.columns, e.rows);
+    });
+  })();
+
+  // custom rows
+
+  (function () {
+    const table = document.getElementById('table_custom_rows');
+
+    const tableEditorInstance = new TableEditor(table, { rows, columns }, { pagination: false });
+
+    const buttons = document.getElementsByClassName('add-entry-button');
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        const company = e.target.getAttribute('data-company');
+        const address = e.target.getAttribute('data-address');
+        const city = e.target.getAttribute('data-city');
+
+        tableEditorInstance.add({ company, address, city });
+
+        e.target.setAttribute('disabled', true);
+        e.target.innerText = 'Loaded';
+      });
+    });
+
+    // disable buttons in edit mode
+
+    table.addEventListener('edit.mdb.tableEditor', () => {
+      buttons.forEach((button) => {
+        button.setAttribute('disabled', true);
+      });
+    });
+
+    table.addEventListener('exit.mdb.tableEditor', () => {
+      buttons.forEach((button) => {
+        if (button.innerText.toLowerCase() !== 'loaded') {
+          button.removeAttribute('disabled');
+        }
+      });
+    });
+  })();
+
+  // notifications
+
+  (function () {
+    const table = document.getElementById('table_notifications');
+    new TableEditor(table, { rows: advancedRows, columns: advancedColumns });
+
+    table.addEventListener('add.mdb.tableEditor', (e) => {
+      const alert = document.getElementById('alert-add-entry');
+      const alertInstance = mdb.Alert.getInstance(alert);
+
+      const { company, office } = e.row;
+      alert.innerHTML = `<strong>New entry:</strong> ${company} (${office})`;
+
+      alertInstance.show();
+    });
+
+    table.addEventListener('delete.mdb.tableEditor', (e) => {
+      const alert = document.getElementById('alert-remove-entry');
+      const alertInstance = mdb.Alert.getInstance(alert);
+
+      const { company, office } = e.row;
+      alert.innerHTML = `<strong>Deleted entry:</strong> ${company} (${office})`;
+
+      alertInstance.show();
+    });
+
+    table.addEventListener('updateEntry.mdb.tableEditor', (e) => {
+      const alert = document.getElementById('alert-update-entry');
+      const alertInstance = mdb.Alert.getInstance(alert);
+
+      const { company, office } = e.row;
+      alert.innerHTML = `<strong>Updated entry:</strong> ${company} (${office})`;
+
+      alertInstance.show();
+    });
+  })();
+</script>

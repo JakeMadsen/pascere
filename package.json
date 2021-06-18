@@ -4,7 +4,8 @@
   "description": "Employee feedback and roadmap portal",
   "main": "./bin/server.js",
   "scripts": {
-    "start": "node ./bin/server/server.js"
+    "start": "nodemon ./bin/server/server.js",
+    "start-live": "node ./bin/server/server.js"
   },
   "repository": {
     "type": "git",
