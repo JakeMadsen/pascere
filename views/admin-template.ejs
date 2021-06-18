@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Includees all scripts -->
+<%- include('partials/standard/scripts'); -%>
+
+<head>
+    <!-- Includees head and styles -->
+    <%- include('partials/standard/head'); -%>
+</head>
+
+<body>
+    <!-- Includes Header -->
+    <%- include('partials/standard/header'); -%>
+
+    <main id="container" class="">
+        <%- include(`pages/${page_file}.ejs`) %>
+    </main>
+    
+    <%- include('partials/standard/footer'); -%>
+</body>
+
+   
+</html>
+

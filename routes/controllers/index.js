@@ -1,6 +1,8 @@
 module.exports = (server) => {
-    console.log('======== Loading API Routes ========')
+
     require("./home")(server);
 
-    
+
+
+    require("./admin")(server);   
 }
