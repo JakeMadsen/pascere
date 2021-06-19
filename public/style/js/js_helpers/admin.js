@@ -1,25 +1,31 @@
 $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
+      console.log("CLICKCKCKC")
+
         $('#sidebar').toggleClass('active');
     });
+
+$('#color-picker_1, #color-picker_2, #color-picker_3').spectrum({
+  type: "component",
+  togglePaletteOnly: true,
+  showInput: true,
+  showAlpha: false
 });
 
-$('.custom-file-input').on('change', function() { 
-    let fileName = $(this).val().split('\\').pop(); 
-    $(this).next('.custom-file-label').addClass("selected").html("Valgt billede: " + fileName);
-    readURL(this);
+  $('tbody').sortable();
+
+  $(document).ready(function() {
+
+
+
+    $('#example').DataTable({
+      "ordering":false
+    });
+
+
+
+  });
+
+
 });
 
-function readURL(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-  
-      reader.onload = function(e) {
-        $('#img-preview').attr('src', e.target.result);
-      }
-  
-      reader.readAsDataURL(input.files[0]);
-    }
-  }
-  
-  
