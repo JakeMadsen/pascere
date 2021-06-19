@@ -11,21 +11,20 @@ var userSchema = mongoose.Schema({
     profile: {
         registration_date:  { type: Date, default: Date.now },
         birthday:           { type: String, default: null },
-        custom_url:         { type: String, default: hat(), index: {unique : true} }
+        image:              { type: String, default: null }
     },
     permissions: {
         user_private_key: { type: String, default: hat()},
-        level: {
-            admin: { type: Boolean, default: false }
-        }
+        user_role: { type: mongoose.Schema.Types.ObjectId, ref: 'Role' }
     }
 });
 
 // methods ======================
-userSchema.methods.initialSignup = function(username, email, password){
+userSchema.methods.initialSignup = function(username, email, password, role_id){
     this.local.username = username;
     this.local.email = email;
     this.local.password = this.generateHash(password);
+    this.local.permissions.user_role  = role_id
 }
 
 // generating a hash
