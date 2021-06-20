@@ -1,4 +1,4 @@
-/*=================== iWatched Server configuration ===================//
+/*=================== pascere Server configuration ===================//
 #
 #
 #
@@ -18,8 +18,8 @@ const   passport        = require('passport'),
         cookieParser    = require('cookie-parser'),
         flash           = require('connect-flash'),
         session         = require('express-session'),
-        mongoose        = require('mongoose');
-
+        mongoose        = require('mongoose'),
+        mongoStore      = require('connect-mongo')(session);
 
 
 /* Server settings */
@@ -59,23 +59,23 @@ mongoose
     })
 
 /* Server User Passport Setup  */
-// require('../../../config/passport/passport')(passport)
-// app.use(session({ 
-//     secret: 'thisIsMySecretCat',
-//     resave: false,
-//     saveUninitialized: false,
-//     store: new mongoStore ({ 
-//         mongooseConnection: mongoose.connection,
-//         collection: 'user_sessions',
-//         autoRemove: 'native',
-//         ttl: 7 * 24 * 60 * 60,
-//         stringify: true,
+require('../../../config/passport/passport')(passport)
+app.use(session({ 
+    secret: 'thisIsMySecretCat',
+    resave: false,
+    saveUninitialized: false,
+    store: new mongoStore ({ 
+        mongooseConnection: mongoose.connection,
+        collection: 'user_sessions',
+        autoRemove: 'native',
+        ttl: 7 * 24 * 60 * 60,
+        stringify: true,
 
-//     })
-// }));
-// app.use(passport.initialize());
-// app.use(passport.session()); // persistent login sessions
-// app.use(flash());
+    })
+}));
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash());
 
 
 

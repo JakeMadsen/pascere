@@ -1,0 +1,135 @@
+<div class="container green-background ">
+    <div class="row" style="padding: 20px 0px 20px 0px;">
+        <div class="col-md-6">
+            <h4>Sign in</h4>
+            <form method="POST" action="/login">
+                <div class="form-outline mb-4">
+                    <% if (Object.keys(page_data.login_error).length !=0) { %>
+                        <input id="login_email" name="email" class="form-control" placeholder="" type="text" autocomplete="email" value="<%= page_data.login_error.flash[0].login %>">
+                    <% } else { %>
+                        <input id="login_email" name="email" class="form-control" placeholder="" type="text" autocomplete="email">
+                    <% } %>
+                    <label class="form-label" for="form1Example1" style="margin-left: 0px;">Username or Email</label>
+                    <div class="form-notch">
+                        <div class="form-notch-leading" style="width: 9px;"></div>
+                        <div class="form-notch-middle" style="width: 88.8px;"></div>
+                        <div class="form-notch-trailing"></div>
+                    </div>
+                </div>
+                <div class="form-outline mb-4">
+                    <input id="login_password" name="password" class="form-control" placeholder="" type="password" autocomplete="current-password">
+                    <label class="form-label" for="form1Example1" style="margin-left: 0px;">Password</label>
+                    <div class="form-notch">
+                        <div class="form-notch-leading" style="width: 9px;"></div>
+                        <div class="form-notch-middle" style="width: 88.8px;"></div>
+                        <div class="form-notch-trailing"></div>
+                    </div>
+                </div>
+                <div class="form-outline mb-4">
+                    <button id="login_submit" type="submit" class="btn btn-block btn-outline-primary" disabled> Login
+                    </button>
+                </div>
+                <% if (Object.keys(page_data.login_error).length !=0) { %>
+                    <div class="alert alert-danger">
+                        <h3 style="color: #101010; text-align: center;">
+                            <%= page_data.login_error.flash[0].error %>
+                        </h3>
+                    </div>
+                <% } %>
+
+                <!-- <a class="small float-right" href="#">Forgot password?</a> -->
+            </form>
+        </div>
+
+        <!-- <div class="col-md-6">
+            <h4>Sign in with social media</h4>
+            <form>
+                <div class="form-outline mb-4">
+                    <a href="" class="btn btn-block btn-outline-info">
+                    <i class="fab fa-twitter"></i>   Login via Twitter</a>
+                </div>
+                <div class="form-outline mb-4">
+                    <a href="" class="btn btn-block btn-outline-primary">
+                    <i class="fab fa-facebook-f"></i>   Login via Facebook</a>
+                </div>
+                <div class="form-outline mb-4">
+                    <a href="" class="btn btn-block btn-outline-danger">
+                    <i class="fab fa-google"></i>   Login via Gmail</a>
+                </div>
+            </form>
+        </div> -->
+
+        <div class="col-md-6">
+            <h4>Sign Up</h4>
+            <!-- show any messages that come back with authentication -->
+            <% if (Object.keys(page_data.signup_error).length !=0) { %>
+                <div class="alert alert-danger">
+                    <%= page_data.signup_error %>
+                </div>
+            <% } %>
+                <form method="POST" action="/signup">
+                    <div class="form-outline mb-4">
+                        <input required id="new_username" name="username" class="form-control" placeholder="" type="text">
+                        <label class="form-label" for="form1Example1" style="margin-left: 0px;">Username</label>
+                        <div class="form-notch">
+                            <div class="form-notch-leading" style="width: 9px;"></div>
+                            <div class="form-notch-middle" style="width: 88.8px;"></div>
+                            <div class="form-notch-trailing"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 15px; margin-bottom: 15px;"></div>
+
+                    <div class="form-outline mb-4">
+                        <input required id="new_email" name="email" class="form-control" placeholder="" type="email" autocomplete="email">
+                        <label class="form-label" for="form1Example1" style="margin-left: 0px;">Email address</label>
+                        <div class="form-notch">
+                            <div class="form-notch-leading" style="width: 9px;"></div>
+                            <div class="form-notch-middle" style="width: 88.8px;"></div>
+                            <div class="form-notch-trailing"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input required id="new_password" name="password" class="form-control" placeholder="Password" type="password" autocomplete="new-password">
+                        <label class="form-label" for="form1Example1" style="margin-left: 0px;">Password</label>
+                        <div class="form-notch">
+                            <div class="form-notch-leading" style="width: 9px;"></div>
+                            <div class="form-notch-middle" style="width: 88.8px;"></div>
+                            <div class="form-notch-trailing"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input required id="new_password_confirm" name="confirm" class="form-control" placeholder="" type="password" autocomplete="new-password">
+                        <label class="form-label" for="form1Example1" style="margin-left: 0px;">Repeat password</label>
+                        <div class="form-notch">
+                            <div class="form-notch-leading" style="width: 9px;"></div>
+                            <div class="form-notch-middle" style="width: 88.8px;"></div>
+                            <div class="form-notch-trailing"></div>
+                        </div>
+                        <small id="newPassWordHelp" class="form-text" style="color: red;">Your passwords needs to match!</small>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <div class="progress">
+                            <div id="progressBar" class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small id="passWordStrength" class="form-text" style="color: red;">You're password is tooweak</small>
+                    </div>
+
+                    <!-- 
+                        <div class="form-check">
+                            <input required type="checkbox" class="form-check-input" style="margin-left: 0px;" id="exampleCheck1">
+                            <label class="form-check-label"  for="exampleCheck1">Accept our <a style="color: lightblue" href="/policy/terms-of-service" target="_blank">Terms of Service</a></label>
+                        </div> 
+                    -->
+                    
+                    <div class="form-outline mb-4">
+                        <button id="newUser" type="submit" class="btn btn-block btn-outline-primary" disabled>Sign Up</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+

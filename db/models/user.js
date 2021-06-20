@@ -21,10 +21,13 @@ var userSchema = mongoose.Schema({
 
 // methods ======================
 userSchema.methods.initialSignup = function(username, email, password, role_id){
+    console.log("Role ID: ", role_id)
     this.local.username = username;
     this.local.email = email;
     this.local.password = this.generateHash(password);
-    this.local.permissions.user_role  = role_id
+    console.log("Set user_role with role_id")
+    this.permissions.user_role  = role_id
+    console.log("Success")
 }
 
 // generating a hash

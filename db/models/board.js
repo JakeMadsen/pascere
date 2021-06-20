@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 var boardSchema = mongoose.Schema({
+    position: { type: Number },
     name: { type: String, index: {unique : true} },
     creation_date:  { type: Date, default: Date.now },
     created_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    position: { type: Number },
     visible: { type: Boolean },
-    user_access: { type: Array }
+    role_access: { type: Array }
 });
 
 boardSchema.methods.initial = function(name, user_id){

@@ -1,6 +1,4 @@
-module.exports = function (server) {
-    console.log('* Index Routes Loaded Into Server');
-    
+module.exports = function (server) {    
     server.get('/', 
         async function(req, res) {
             res.render('template.ejs', {

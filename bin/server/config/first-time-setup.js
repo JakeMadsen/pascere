@@ -2,6 +2,7 @@ const readlineSync = require ('readline-sync');
 const mongoose = require('mongoose');
 const fs = require('fs')
 const User = require('../../../db/models/user');
+const Role = require('../../../db/models/role')
 
 var serverSettings = {
     user: {
@@ -120,15 +121,24 @@ async function setupUser(){
 async function createUser(user){
 
     mongoose.connect(serverSettings.mongoDB, { useNewUrlParser: true }).then(() => {
-        let newUser = new User()
-        newUser.initialSignup(user.username, null, user.password);
+        let newRole = new Role()
+        newRole.create("Admin", "Server")
 
-        newUser.save((error, user) => {
-            if(error)
-                throw new Error(error);
-            else 
-                mongoose.disconnect();
-        });
+        newRole.save((error, role) => {
+            let newUser = new User()
+            newUser.initialSignup(user.username, null, user.password, role._id);
+
+            newUser.save((error, user) => {
+                if(error)
+                    throw new Error(error);
+                else 
+                    mongoose.disconnect();
+            });
+
+
+        })
+
+
 
        
     }).catch(error => {
