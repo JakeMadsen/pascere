@@ -9,67 +9,128 @@
 
     <ul class="list-unstyled components">
         <!-- Go to index -->
-        <li class="">
-            <a href="/admin">
-                <div class="row">
+        <li class="" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+            <a href="/admin" >
+                <div class="row ms-auto">
                     <div class="col-md-2">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-tachometer-alt fa-fw"></i>
                     </div>
-                    <div class="col-md-10">
-                        Home
+                    <div class="col-md-10 hideText">
+                        Dashboard
                     </div>
                 </div>
-                
-                
             </a>
         </li>
 
         <!-- Go to user management -->
         <li class="">
             <a href="/admin/users">
-                <i class="fas fa-users"></i>
-                Users
+                <div class="row ms-auto">
+                    <div class="col-md-2">
+                        <i class="fas fa-users fa-fw"></i>
+                    </div>
+                    <div class="col-md-10 hideText">
+                        Users
+                    </div>
+                </div>
             </a>
         </li>  
 
         <!-- Go to board management -->
         <li class="">
             <a href="/admin/boards">
-                <i class="fab fa-wpforms"></i>
-                Boards
+                <div class="row ms-auto ">
+                    <div class="col-md-2">
+                        <i class="fas fa-clipboard fa-fw"></i>
+                    </div>
+                    <div class="col-md-10 text-start hideText">
+                        Boards
+                    </div>
+                </div>
             </a>
         </li>
 
-        <!-- Other minor things -->
+        <!-- Board posts -->
+
         <li class="">
-            <a href="#otherSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fas fa-clone"></i>
-                Board Posts
+            <a href="#otherSubmenu" data-bs-toggle="collapse" role="button" aria-expanded="false"  aria-controls="collapseExample" class="dropdown-toggle">
+                <div class="row ms-auto ">
+                    <div class="col-md-2 hideText">
+                        <i class="fas fa-clone fa-fw "></i>
+                    </div>
+                    <div class="col-md-8 hideText">
+                        Posts
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fas fa-chevron-down fa-fw"></i>
+                    </div>
+                </div>
             </a>
+            <!-- Dropdown -->
             <ul class="collapse list-unstyled" id="otherSubmenu">
-                <li class="">
+                <li class="#">
                     <a href="/admin/restrictedUrls">
-                        <i class="fas fa-list"></i>
-                        URL Restrictions
+                        <div class="row ms-auto">
+                            <div class="col-md-2">
+                                <i class="fas fa-clipboard-list fa-fw" style="color: blue;"></i>
+                            </div>
+                            <div class="col-md-10 text-start hideText">
+                                Feature Requests
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="#">
+                    <a href="/admin/restrictedUrls">
+                        <div class="row ms-auto">
+                            <div class="col-md-2">
+                                <i class="fas fa-clipboard-list fa-fw" style="color: red;"></i>
+                            </div>
+                            <div class="col-md-10 text-start hideText">
+                                Bug Reports
+                            </div>
+                        </div>
                     </a>
                 </li>
             </ul>
+            <!-- Dropdown end -->
         </li>
+
 
         <!-- return to website -->
         <li >
             <a href="/">
-                <i class="fas fa-home"></i>
-                Return
+                <div class="row ms-auto">
+                    <div class="col-md-2">
+                        <i class="fas fa-home fa-fw"></i>
+                    </div>
+                    <div class="col-md-10 hideText">
+                        Return
+                    </div>
+                </div>
             </a>
         </li>
 
         <!-- log out -->
         <li >
             <a href="/logout">
-                <i class="fas fa-sign-out-alt"></i>
-                Log out
+                <div class="row ms-auto">
+                    <div class="col-md-2">
+                        <i class="fas fa-sign-out-alt fa-fw"></i>
+                    </div>
+                    <div class="col-md-10 hideText">
+                        Log out
+                    </div>
+                </div>
             </a>
         </li>
     </ul>
 </nav>
+
+<i class="fab fa-accessible-icon"></i>
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

@@ -82,6 +82,11 @@ span {
     display: none;
 }
 
+#sidebar.active .hideText,
+#sidebar.active .CTAs {
+    display: none;
+}
+
 #sidebar.active .sidebar-header .showFavicon {
     display: block;
     size: auto;
