@@ -1,18 +1,20 @@
 const mongoose = require('mongoose');
 
 var boardSchema = mongoose.Schema({
-    position: { type: Number },
-    name: { type: String, index: {unique : true} },
-    creation_date:  { type: Date, default: Date.now },
-    created_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    visible: { type: Boolean },
-    role_access: { type: Array }
+    position:       { type: Number  },
+    name:           { type: String   , index: { unique : true} },
+    description:    { type: String  },
+    color:          { type: String  }, 
+    visible:        { type: Boolean },
+    creation_date:  { type: Date     , default: Date.now },
 });
 
-boardSchema.methods.initial = function(name, user_id){
-    this.name = name;
-    this.created_by = user_id;
+boardSchema.methods.initial = function(name, color, visible, description, user_id){
+    this.name           = name;
+    this.description    = description;
+    this.color          = color; 
+    this.visible        = visible;
+    this.created_by     = user_id;
 }
 
-// create the model for users and expose it to our app
-module.exports = mongoose.model('Board', boardSchema , 'Boards');
+module.exports = mongoose.model('Board', boardSchema , 'boards');

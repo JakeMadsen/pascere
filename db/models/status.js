@@ -2,17 +2,13 @@ const mongoose = require('mongoose');
 const User = require('./user');
 
 var statusSchema = mongoose.Schema({
-    name: { type: String, index: {unique : true} },
-    creation_date:  { type: Date, default: Date.now },
-    created_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    color: { type: String },
-    position: { type: Number},
-    visible: { type: Boolean }
+    name:           { type: String, index: {unique : true} },
+    color:          { type: String },
+    creation_date:  { type: Date, default: Date.now }
 });
 
-statusSchema.methods.initial = function(name, user_id, color){
+statusSchema.methods.initial = function(name, color){
     this.name = name;
-    this.created_by = user_id;
     this.color = color;
 }
 

@@ -1,15 +1,11 @@
 const mongoose = require('mongoose');
 
 var tagSchema = mongoose.Schema({
-    name: { type: String, index: {unique : true} },
-    creation_date:  { type: Date, default: Date.now },
-    created_by: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    visible: { type: Boolean }
+    name: { type: String, index: {unique : true} }
 });
 
-tagSchema.methods.initial = function(name, user_id){
+tagSchema.methods.initial = function(name){
     this.name = name;
-    this.created_by = user_id;
 }
 
 // create the model for users and expose it to our app
